@@ -13,17 +13,64 @@ const ctx=canvas.getContext('2d')
 let mood='cr'
 let tem;
 
+file.onchange=function()
+  {img.src=URL.createObjectURL(file.files[0])
+scrollby({left:86})
+  }
+img.onload=()=>{canvas.width=img.width
+canvas.height=img.height
+ctx.drawImage(img,0,0,canvas.width,canvas.height)
+}
+
+
+
+
+let loopp=document.querySelectorAll("input")
+loopp.forEach(element=>
+  {element.addEventListener("input",function(){img.style.filter=` blur(${blur.value}px)
+brightness(${brightness.value}%)
+contrast(${contrast.value}%)
+sepia(${sepia.value}%)
+grayscale(${grayscale.value})
+hue-rotate(${hueRotete.value}deg) `
+ctx.filter=` blur(${blur.value}px)
+brightness(${brightness.value}%)
+contrast(${contrast.value}%)
+sepia(${sepia.value}%)
+grayscale(${grayscale.value})
+hue-rotate(${hueRotete.value}deg) `
+ctx.drawImage(img,0,0,canvas.width,canvas.height)
+
+}
+
+)}
+)
+download.onclick=()=>{download.href=canvas.toDataURL()}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function s(){
-  ctx.filter='none'
+  ctx.filter=`none`
   img.style.filte='none'
   blur.value='0'
   brightness.value='100'
   contrast.value='100'
   sepia.value='0'
   grayscale.value='0'
-  //hue-rotate.value='0'
-  img.style.cssText=`filter:`
+
+  //hue-rotate.value='5'
     
 }
 
@@ -32,11 +79,12 @@ function s(){
 
 
 reset.onclick=function(){s()}
-
+/*
 
  function sd(f,i,n){
 f.onchange=function(){
-s()
+//s()
+canvas.createObjectURL(file.files[0])
 
 
 
@@ -47,14 +95,8 @@ s()
 }
 canvas.height=img.height
 canvas.width=img.width
-img.onload=function()
-{ctx.drawImage(img,0,0,canvas.height,canvas.width)
-
+img.onload=()=>{ctx.drawImage(img,0,0,canvas.height,canvas.width)
 }
-
-
-
-
 
 
 
@@ -87,13 +129,9 @@ hue-rotate(${hueRotete.value}deg)`
 )}
 
 )
+ctx.drawImage(img,0,0,img.width,img.height)
 
-download.onclick=function()
-  { download.href=canvas.toDataURL()
-    console.log("ghada")
-  } 
-  //end edit--------------------------------------------------------------------------------------------------------------------------------------->
-
+download.onclick = function() {download.href=canvas.toDataURL()}*/
 //end edit--------------------------------------------------------------------------------------------------------------------------------------->
 let addtext=document.getElementById("addtext")
 let bnadd=document.getElementById("bnadd")
@@ -263,10 +301,11 @@ let condo=document.querySelector(".condo")
 let conp=document.querySelector(".conp")
 let conrandom=document.querySelector(".conrandom")
 let xx=document.querySelector(".x")
-
-
+let lol=document.getElementById("lol")
+lol.onclick=()=>{location.reload()}
 
 s1.onclick=()=>{
+  lol.style.display='flex'
 sh.style.display='none'
 condo.style.display='flex'
 conp.style.display='none'
@@ -275,6 +314,8 @@ document.body.style.cssText=`background-image: url(s4.jpg);`
 
 }
 s2.onclick=()=>{
+  lol.style.display='flex'
+
   sh.style.display='none'
   condo.style.display='none'
   conp.style.display='flex'
@@ -284,12 +325,17 @@ s2.onclick=()=>{
 
   }
   s3.onclick=()=>{
+    lol.style.display='flex'
+      document.body.style.cssText=`background-image: url(s5.jpg);`
+
     sh.style.display='none'
     condo.style.display='none'
     conp.style.display='none'
     conrandom.style.display='flex'
     }
     s4.onclick=()=>{
+      lol.style.display='flex'
+
       xx.style.display='flex'
       document.body.style.cssText=`background:linear-gradient(210deg, rgb(25 54 105), rgb(72 189 221));
 `

@@ -1,16 +1,17 @@
-body{background-image: url(s1.jpg); height: 100vh; perspective: 400px; position: relative; background-size: cover; background:linear-gradient(180deg, #107492, #140b75); transition: 2s; }
+body{background-image: url(s1.jpg); height: 100vh; perspective: 400px; position: relative; background-size: cover; background:linear-gradient(151deg, #000000, #2e2e2e); transition: 2s; animation: tt 8s infinite; }
 /*background:linear-gradient(180deg, #107492, #140b75)*/
 *{transition: 1s;}
 .conp{display: none; transition: 2s;}
 .conPhote{display: grid; grid-template-columns: 1fr 3fr; width: 80%; margin: auto;}.boxPhote{ display: flex; flex-direction: column; }
         .conPhote.boxPhote{ display: flex; flex-direction: column;}
-        .conPhote img,canvas{ border-radius:15px ; box-shadow: #2b1f835c -1px -10px 20px 6px; min-height: 400px;filter: hue-rotate(); max-width:107%; max-height: 90vh; margin: auto 18px; transition: 1s; }
+        .conPhote img,canvas{ border-radius:15px ; box-shadow: #151518 -1px -10px 20px 6px; 
+                min-height: 400px;filter: hue-rotate(); max-width:107%; max-height: 90vh; margin: auto 18px; transition: 1s;max-width: 95vw; }
         .conPhote ul{list-style: none;direction: rtl;}
         .conPhote li{color: white; display: flex; flex-direction: column; }
         .conPhote label{text-transform: uppercase; }
-        .conPhote input{height: 120px;}
-        .conPhote img:hover{transform:  rotatey(20deg);}
-        .conPhote .boxPhote label{color: aliceblue; border: 1px white dashed;padding: 6px; text-align: center; cursor: pointer; margin: 8px; text-transform: uppercase;}
+        .conPhote input{height: 60px; }
+        .conPhote img,canvas:hover{transform:  rotatey(26deg);}
+        .conPhote .boxPhote label{color: aliceblue; border: 1px white dashed;padding: 4px; text-align: center; cursor: pointer; margin: 8px; text-transform: uppercase;}
         .conPhote span{background-color: black; color: aliceblue; border-radius: 20px; padding: 10px; cursor: pointer; width: 90px; text-align: center; transition: 2s; }
         .conPhote span:hover{background-color: #bebebe6a; letter-spacing: 3px; text-align: end;}
 /*end edit display flex*/
@@ -79,7 +80,7 @@ p:hover{animation-play-state: paused; box-shadow: gold 2px 2px 2px 9px;}
 .conrandom{display: none; justify-content: center; align-items: center; width: 100%; height: 80vh; 
         background-color: #19634c00;
     border-radius: 61%;
-    box-shadow: 4px 2px 7px 0px #000000;}
+    box-shadow: 4px 2px 7px 0px #fffefe7b; margin: 0 ;padding: 0;}
 tbody{backdrop-filter: blur(50px); border-radius: 20px;}
 td{margin: 4px; padding: 5px; color: #fdfcff; text-transform: capitalize;}
 tr{margin: 5px; padding: 5px; background-color: #1c1c1c49;}
@@ -87,18 +88,18 @@ tr{margin: 5px; padding: 5px; background-color: #1c1c1c49;}
 
 table{display: grid; width: 100%; }
 tbody{display: grid; grid-template-columns: auto auto auto  ;}
-.conr{display: flex;flex-direction: column; background-color: #0000001d; }
+.conr{display: flex;flex-direction: column;  }
 .ti{background-color: #000000;}
 
-.conr input{ border-radius: 20px;animation: d 2s infinite  ; color: wheat;}
-.conr button{border-radius: 20%; background-color: #0000002f; text-transform: uppercase; color: white; font-size: 15px; animation: f 4s infinite;transition: 1s;}
-.conr button:hover{transform: scale(1.1);}
-.conr input:hover{transform: scale(1.1);}
+.conr input{ border-radius: 20px;animation: d 2s infinite  ; color: wheat;transform: rotatex(107deg); transition: 1s;}
+.conr button{border-radius: 20%; background-color: #0000002f; text-transform: uppercase; color: white; font-size: 15px; animation: f 4s infinite;transition: 1s;transform: rotatex(107deg);}
+.conr button:hover{transform: scale(1.1);transform: rotatex(0deg);}
+.conr input:hover{transform: scale(1.1);transform: rotatex(0deg);}
 @keyframes d
 {
-        0%{background:linear-gradient(0deg, #297569, #20317f);border-radius: 20px;}
+        0%{background:linear-gradient(0deg,  #75296d, #20317f);border-radius: 20px;}
        
-        100%{background:linear-gradient(270deg,  #297569, #20317f);border-radius: 30px}
+        100%{background:linear-gradient(270deg,  #75296d, #20317f);border-radius: 30px}
 }
 @keyframes f
 {
@@ -106,6 +107,13 @@ tbody{display: grid; grid-template-columns: auto auto auto  ;}
        
         100%{background:linear-gradient(270deg, #75296d, #20317f);border-radius: 30px; color: #000000;}
 }
+@keyframes tt
+{
+        0%{background:linear-gradient(1deg);}
+       
+        100%{background:linear-gradient(340deg)}
+}
+
 
 /*end random*/
 
@@ -115,21 +123,26 @@ tbody{display: grid; grid-template-columns: auto auto auto  ;}
 #s2{backdrop-filter: blur(4px);display: flex; justify-content: center;border-radius: 23px; box-shadow: #000000 2px 2px 14px 4px;transition: 1s }
 #s3{backdrop-filter: blur(4px);display: flex; justify-content: center;border-radius: 23px; box-shadow: #000000 2px 2px 14px 4px;transition: 1s}
 #s4{backdrop-filter: blur(4px);display: flex; justify-content: center;border-radius: 23px; box-shadow: #000000 2px 2px 14px 4px;transition: 1s}
-#sh i{margin: auto; font-size: 190px; transition: 2s; text-shadow: 5px 0px 9px #000000;}
+#sh i{margin: auto; font-size: 190px; transition: 2s; text-shadow: 5px 0px 9px #000000; color: white;}
 #s1:hover{transform: scale(1.1) rotatey(-30deg);}
 #s2:hover{transform: scale(1.1) rotatey(30deg);}
 #s3:hover{transform: scale(1.1) rotatey(-30deg);}
-#s4:hover{transform: scale(1.1) rotatey(30deg);}
-i:hover{color: #fdfcff61; transform: scale(1.1);}
-#s4 i{animation:  y 10s infinite;}
+#s4:hover{transform: scale(1.1) rotatey(30deg); }
+#s4 i{animation:  y 10s infinite; color: #000000;}
 @keyframes y{
 0%{transform: rotate(0deg);}
 100%{transform: rotate(360deg); }
 
-
 }
+i:hover{color: #270f4dd8; transform: scale(1.1);}
+
+
+
+
 .x{position: sticky; top: 0; left: 0; display: none;font-size: 40px;z-index: 100;}
 
+#lol{width: 90px; animation:  y infinite 50s; transition: 2s; display:none;}
+#lol:hover{animation-play-state: paused; transform: scale3d(1.2);}
 
 
 
@@ -143,17 +156,15 @@ i:hover{color: #fdfcff61; transform: scale(1.1);}
 
 
 
-
-
-
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+        body{background-size: cover; background-position-x: 140%;}
         .conPhote{display: grid;grid-template-columns: 1fr  ;}
-        .conPhote img,canvas{max-width: 80%;}
+        .conPhote img,canvas{max-width: 95vw;}
         .conPhote input{height: 20px;}
         #text{width: 90%;}
         #add .p{font-size: 15px; width: 100%;}   
         #addtext{width: 90%; font-size: 15px;}
         .o{margin:0 25% 45% 0 ; width: 60%;}
         #sh{grid-template-columns: 1fr; gap: 15px;}
+        .conPhote input {box-shadow: inset -3px 20px 5px 20px #47478f65; border-radius:20px ;} 
         }
